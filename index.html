@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Horizon Launcher</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@600&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--sky:#fbe9d0;--sea:#0f3d46;--ink:#1d2b2e;--sun:#e8833a;--paper:#fffaf2;--muted:#5d6b6e}
+@media (prefers-color-scheme:dark){:root{--sky:#2a1f2d;--sea:#0a2a31;--ink:#f1e6d6;--sun:#f0954f;--paper:#171c1e;--muted:#a9b4b5}}
+*{box-sizing:border-box}
+body{margin:0;font-family:Tajawal,Tahoma,sans-serif;background:var(--paper);color:var(--ink);line-height:1.8}
+.hero{background:linear-gradient(var(--sky) 0 62%,var(--sea) 62% 100%);padding:72px 20px 0;text-align:center;position:relative;overflow:hidden}
+.sun{width:120px;height:120px;border-radius:50%;background:var(--sun);margin:0 auto -60px;position:relative;z-index:1}
+.hero .inner{background:var(--paper);max-width:560px;margin:0 auto;padding:56px 24px 36px;border-radius:14px 14px 0 0;position:relative;z-index:2}
+h1{font-family:"Reem Kufi",Tahoma,sans-serif;font-size:clamp(2.2rem,8vw,3.4rem);margin:0 0 8px;direction:ltr}
+.hero p{margin:0 0 24px;color:var(--muted)}
+.btn{display:inline-block;background:var(--sun);color:#1d1208;font-weight:700;padding:14px 34px;border-radius:8px;text-decoration:none;font-size:1.1rem}
+.btn:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.meta{font-size:.9rem;color:var(--muted);margin-top:12px}
+main{max-width:640px;margin:0 auto;padding:36px 20px 60px}
+h2{font-family:"Reem Kufi",Tahoma,sans-serif;font-size:1.5rem;margin:36px 0 10px}
+ol,ul{padding-inline-start:22px}
+code{background:var(--sky);padding:2px 7px;border-radius:5px;direction:ltr;unicode-bidi:embed}
+table{width:100%;border-collapse:collapse;margin:8px 0}
+td{padding:8px 4px;border-bottom:1px solid var(--sky)}
+td:first-child{color:var(--muted);width:42%}
+.note{border-inline-start:4px solid var(--sun);padding:6px 14px;background:var(--sky)}
+footer{text-align:center;color:var(--muted);font-size:.85rem;padding:0 20px 40px}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="sun" aria-hidden="true"></div>
+  <div class="inner">
+    <h1>Horizon Launcher</h1>
+    <p>لانشر خفيف لتشغيل ملفات jar على الأجهزة الضعيفة</p>
+    <a class="btn" href="HorizonLauncher.jar" download>تحميل اللانشر</a>
+    <div class="meta">ملف واحد · أقل من 20 كيلوبايت · لنظام Windows</div>
+  </div>
+</header>
+<main>
+  <h2>مناسب لجهازك</h2>
+  <table>
+    <tr><td>المعالج</td><td>Core 2 Duo E7400</td></tr>
+    <tr><td>الذاكرة</td><td>2.5 جيجا، والافتراضي في اللانشر 1024 MB للعبة</td></tr>
+    <tr><td>وضع الأجهزة الضعيفة</td><td>يشغّل Serial GC ويقلل حجم الـ stack</td></tr>
+    <tr><td>Java المطلوبة</td><td>Java 8 (الأخف على جهازك)</td></tr>
+  </table>
+
+  <h2>طريقة الاستخدام</h2>
+  <ol>
+    <li>ثبّت Java 8 من <a href="https://adoptium.net/temurin/releases/?version=8">Adoptium</a>.</li>
+    <li>حمّل <code>HorizonLauncher.jar</code> وافتحه بنقرتين.</li>
+    <li>اختر ملف jar الذي تريد تشغيله، واترك الذاكرة على 1024.</li>
+    <li>اضغط «تشغيل». يظهر سجل التشغيل أسفل النافذة.</li>
+  </ol>
+
+  <h2>لو الملف لا يفتح</h2>
+  <p>افتح CMD في مجلد الملف واكتب: <code>java -jar HorizonLauncher.jar</code></p>
+
+  <p class="note">اللانشر يشغّل ملفات jar التي تملكها فقط، ولا يحمّل ألعاباً ولا يتجاوز تراخيصها. للعبة ماين كرافت الأصلية استخدم حسابك من minecraft.net. وللجهاز الضعيف جداً جرّب لعبة Luanti المجانية.</p>
+</main>
+<footer>Horizon Launcher</footer>
+</body>
+</html>
